@@ -1,0 +1,6 @@
+
+body {
+    background: linear-gradient(#cccccc, #999999);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh; /* Set background size to cover the entire viewport height */
+}
