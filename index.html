@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Jacob McKee Bytes</title>
+    <title>Jacob's Bits and Bytes</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -12,25 +12,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <span class="fs-4">Jacob McKee Bytes</span>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Posts</a></li>
-          </ul>
-        </header>
+    <div class="header">
+        <h1>Jacob's Bits and Bytes</h1>
+        <p>My Personal Journey</p>
       </div>
+      
+      <div class="row">
+        <div class="rightcolumn">
+            <div class="card">
+              <h2>About Me</h2>
+              <p>Hello to anyone viewing this! This is just a personal space that I thought I would share my learning journey on.</p>
+            </div>
+          </div>
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Setting up a blog with ChatGPT</h2>
+            <h5>How easy was it to set up this blog with ChatGPT?, Dec 14, 2023</h5>
+            <div class="content">
+                <p>My HTML knowledge is there, but it is nowhere near what I would like it to be.
+                    As such, I decided to use a template for this blog. I found a template on W3Schools that was workable and decided to build off it.
+                    It was extremely barebones, but it was a good starting point and, with the aid of ChatGPT, I was able to get it to where it is now.
+                    The power of ChatGPT meant that I was able to give it my code and ask for a few modifications, such as the "Read More" button,
+                    and it did it with no errors and gave exactly what I wanted. Granted, I have asked it things in the past and it did not perform
+                    as well, but if you ask it the right questions, it can be a very powerful tool. And when it still doesn't work, I just have to figure
+                    it out myself. Which, is just fine. But! I am using what it generates to learn, by reading through what it gives me and making sure I 
+                    understand what it is doing. If I were to just rely on it entirely, I wouldn't be learning anything and defeating the purpose of this blog.
+                </p>
+            </div>
+            <p class="read-more" onclick="toggleContent(this)">Read More</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <p>2023 All Rights Reserved</p>
+      </div> 
 
-    <main>
-        <!-- Your content goes here -->
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Jacob McKee Bytes. All rights reserved.</p>
-    </footer>
+      <script>
+        function toggleContent(element) {
+            var content = element.previousElementSibling; // Get the content div
+            content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+            element.textContent = (content.style.display === 'none' || content.style.display === '') ? 'Read More' : 'Read Less';
+        }
+    </script>
 </body>
 </html>
